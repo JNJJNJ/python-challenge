@@ -1,7 +1,7 @@
 import csv
 # Needed:
 # 1. The total number of votes cast - done
-# 2. A complete list of candidates who received votes
+# 2. A complete list of candidates who received votes - done"
 # 3. The percentage of votes each candidate won
 # 4. The total number of votes each candidate won
 # 5. The winner of the election based on popular vote
@@ -23,7 +23,10 @@ with open(election_file_path) as election_file:
         ballot_id =row[0]
         county = row[1]
         candidate = row[2]
-        candidates.append(candidate)
+        #check to see if the candidate exists
+        if candidate not in candidates:
+            #add to list if they haven't been added
+            candidates.append(candidate) 
 
 
 # print the results to screen
@@ -33,6 +36,7 @@ print (f'Total Votes: {total_votes}')
 print ('-------------------------')
 
 print(len(candidates),"candidates")
+print(candidates,"candidates")
 # print the results to file
 
 #### end here
