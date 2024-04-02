@@ -29,8 +29,9 @@ with open(election_file_path) as election_file:
             #add to list if they haven't been added
             candidates.append(candidate) 
             candidates_votes.append(1) #add the first vote
-        else:
-            #do nothing
+        else: # candidate is in list
+            candidates_id = candidates.index(candidate) 
+            candidates_votes[candidates_id] +=1
 
 
 # print the results to screen
