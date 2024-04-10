@@ -42,7 +42,7 @@ print ('-------------------------')
 for candidate in candidates:
     current_candidate_votes = candidates_votes[candidates.index(candidate)]
     current_vote_pct = (current_candidate_votes/total_votes)*100
-    print(f'{candidate}: {current_vote_pct}% ({candidates_votes})')
+    print(f'{candidate}: {round(current_vote_pct,3)}% ({candidates_votes})')
 
 print(len(candidates),"candidates")
 print(candidates,"candidates")
