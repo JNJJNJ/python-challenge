@@ -20,7 +20,8 @@ with open(budget_file_path) as budget_file:
     for row in csv_file:
         # add to total months
         total_months.append(row[0])
-        
+        # total amount of profit/losses
+        profit_losses.append(int(row[1]))
     
 
 
@@ -31,7 +32,7 @@ with open(budget_file_path) as budget_file:
 # print('Financial Analysis')
 # print('----------------------------')
 print(f'Total Months: {len(total_months)}')
-
+print(f'Total: ${sum(profit_losses)}')
 
 ### end here
 
