@@ -27,10 +27,10 @@ with open(budget_file_path) as budget_file:
         changes.append(profit_losses[i+1]-profit_losses[i])
     #greatest increase/decreases
     max_increase_value = max(changes)
+    max_decrease_value = min(changes)
     max_increase_month = changes.index(max(changes)) + 1
+    max_decrease_month = changes.index(min(changes)) + 1
     
-
-
 
 
 
@@ -40,7 +40,8 @@ with open(budget_file_path) as budget_file:
 #print(f'Total Months: {len(total_months)}')
 #print(f'Total: ${sum(profit_losses)}')
 #print(f'Average Change: {round(sum(changes)/len(changes),2)}')
-print(f'Greatest Increase in Profits: {total_months[max_increase_month]}(${(str(max_increase_value))})')
+#print(f'Greatest Increase in Profits: {total_months[max_increase_month]}(${(str(max_increase_value))})')
+print(f'Greatest Decrease in Profits: {total_months[max_decrease_month]}(${(str(max_decrease_value))})')
 ### end here
 
 # example output
