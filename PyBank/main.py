@@ -12,8 +12,23 @@ budget_file_path = r"PyBank\Resources\budget_data.csv"
 # open the file
 with open(budget_file_path) as budget_file:
     csv_file = csv.reader(budget_file)
+    #read row in the file
     for row in csv_file:
-        print(row)
+        #total number of months
+        months = []
+        profit_losses = []
+        changes = []
+
+        for row in csv_file:
+            months.append(row[0])
+
+profit_losses.append(int(row[1]))
+
+# calculate the total number of months
+total_months = len(months)
+
+
+# calculate the changes in profit/losses and store them in a list
 
 ### end here
 
