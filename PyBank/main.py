@@ -22,6 +22,10 @@ with open(budget_file_path) as budget_file:
         total_months.append(row[0])
         # total amount of profit/losses
         profit_losses.append(int(row[1]))
+    # changes in profit/losses
+    for i in range(len(profit_losses)-1):
+        changes.append(profit_losses[i+1]-profit_losses[i])
+
     
 
 
@@ -31,9 +35,9 @@ with open(budget_file_path) as budget_file:
 # print the results to screen
 # print('Financial Analysis')
 # print('----------------------------')
-print(f'Total Months: {len(total_months)}')
-print(f'Total: ${sum(profit_losses)}')
-
+#print(f'Total Months: {len(total_months)}')
+#print(f'Total: ${sum(profit_losses)}')
+print(f'Average Change: {round(sum(changes)/len(changes),2)}')
 ### end here
 
 # example output
