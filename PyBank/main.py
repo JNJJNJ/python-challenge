@@ -53,11 +53,3 @@ with open(out_file_path, 'w') as file_out:
     file_out.write(f'Greatest Decrease in Profits: {total_months[max_decrease_month]}(${(str(max_decrease_value))})\n')
 ### end here
 
-# example output
-# Financial Analysis
-# ----------------------------
-# Total Months: 86
-# Total: $22564198
-# Average Change: $-8311.11
-# Greatest Increase in Profits: Aug-16 ($1862002)
-# Greatest Decrease in Profits: Feb-14 ($-1825558)
