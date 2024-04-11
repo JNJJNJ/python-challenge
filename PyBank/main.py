@@ -1,5 +1,5 @@
 import csv
-# 
+# Needed:
 # 1. The total number of months included in the dataset
 # 2. The net total amount of "Profit/Losses" over the entire period
 # 3. The changes in "Profit/Losses" over the entire period, and then the average of those changes
@@ -32,16 +32,15 @@ with open(budget_file_path) as budget_file:
     max_decrease_month = changes.index(min(changes)) + 1
     
 
-
-
 # print the results to screen
-# print('Financial Analysis')
-# print('----------------------------')
-#print(f'Total Months: {len(total_months)}')
-#print(f'Total: ${sum(profit_losses)}')
-#print(f'Average Change: {round(sum(changes)/len(changes),2)}')
-#print(f'Greatest Increase in Profits: {total_months[max_increase_month]}(${(str(max_increase_value))})')
+print('Financial Analysis')
+print('----------------------------')
+print(f'Total Months: {len(total_months)}')
+print(f'Total: ${sum(profit_losses)}')
+print(f'Average Change: {round(sum(changes)/len(changes),2)}')
+print(f'Greatest Increase in Profits: {total_months[max_increase_month]}(${(str(max_increase_value))})')
 print(f'Greatest Decrease in Profits: {total_months[max_decrease_month]}(${(str(max_decrease_value))})')
+
 ### end here
 
 # example output
