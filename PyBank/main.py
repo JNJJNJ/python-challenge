@@ -41,6 +41,16 @@ print(f'Average Change: {round(sum(changes)/len(changes),2)}')
 print(f'Greatest Increase in Profits: {total_months[max_increase_month]}(${(str(max_increase_value))})')
 print(f'Greatest Decrease in Profits: {total_months[max_decrease_month]}(${(str(max_decrease_value))})')
 
+#print the results to file
+out_file_path = r"PyBank\budget_results.txt"
+with open(out_file_path, 'w') as file_out:
+    file_out.write('Financial Analysis\n')
+    file_out.write('----------------------------\n')
+    file_out.write(f'Total Months: {len(total_months)}\n')
+    file_out.write(f'Total: ${sum(profit_losses)}\n')
+    file_out.write(f'Average Change: {round(sum(changes)/len(changes),2)}\n')
+    file_out.write(f'Greatest Increase in Profits: {total_months[max_increase_month]}(${(str(max_increase_value))})\n')
+    file_out.write(f'Greatest Decrease in Profits: {total_months[max_decrease_month]}(${(str(max_decrease_value))})\n')
 ### end here
 
 # example output
